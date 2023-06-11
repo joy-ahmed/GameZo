@@ -2,6 +2,7 @@ import { Grid, GridItem } from "@chakra-ui/layout"
 import { Show } from "@chakra-ui/media-query"
 import Navbar from "./components/Navbar"
 import GameGrid from "./components/GameGrid"
+import GenreList from "./components/GenreList"
 
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
       </GridItem>
       {/* used for media query this item will not shown below 980px */}
       <Show above="lg">
-        <GridItem area='aside'>Aside</GridItem>
+        <GridItem area='aside'>
+          <GenreList />
+        </GridItem>
       </Show>
       <GridItem area='main'>
         <GameGrid />
